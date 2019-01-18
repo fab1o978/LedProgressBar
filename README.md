@@ -1,5 +1,7 @@
-# LedProgressBar
-Arduino library to turn on (fading) leds based on input value, like a progress bar.
+# LedProgressBar - Alpha
+Arduino library to sequentially turn on leds array or strip based on input value, like a progress bar.
+
+Intermediate values will be faded. Eg.: an input value of 55% on a 10 led strip, will turn on first 5 leds with full brightness and 6th led with half brightness.
 
 ## Examples
 ### Constructors

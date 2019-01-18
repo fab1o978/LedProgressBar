@@ -1,13 +1,13 @@
 #include <SoftwareSerial.h>
 #include <SerialCommand.h>
 #include <FastLED.h>
-#include <LedProgress.h>
+#include <LedProgressBar.h>
 
 #define DATA_PIN 2
 #define NUM_LEDS 10
 
 SerialCommand SCmd;
-LedProgress progressBar(NUM_LEDS);
+LedProgressBar progressBar(NUM_LEDS);
 
 void setup() {
   // initialize serial:

@@ -4,11 +4,11 @@
 #include <Arduino.h>
 #include <FastLED.h>
 
-class LedProgress {
+class LedProgressBar {
     public:
         // Constructors
-        LedProgress(int _numleds);
-        LedProgress(int _numleds, CRGB _color);
+        LedProgressBar(int _numleds);
+        LedProgressBar(int _numleds, CRGB _color);
 
         // Methods
         void setInputRange(int min, int max);

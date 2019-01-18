@@ -1,4 +1,4 @@
-LedProgress	KEYWORD1
+LedProgressBar  KEYWORD1
 
 setColor	KEYWORD2
 setInputRange	KEYWORD2

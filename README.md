@@ -4,7 +4,10 @@ Arduino library to turn on (fading) leds based on input value, like a progress b
 ## Examples
 ### Constructors
 ```C++
+// Create a progress bar with 10 leds
 LedProgressBar progressBar(10);
+
+// Create a progress bar with 10 leds, all set to BLUE
 LedProgressBar progressBar(10, CRGB::Blue);
 ```
 ### Methods

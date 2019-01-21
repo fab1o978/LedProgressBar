@@ -6,7 +6,8 @@
 
 LedProgressBar progressBar(NUM_LEDS);
 
-void setup() {
+void setup()
+{
 
   progressBar.setDebug(true);
 
@@ -23,8 +24,14 @@ void setup() {
   FastLED.addLeds<NEOPIXEL, DATA_PIN>(progressBar.leds, NUM_LEDS);
 }
 
-void loop() {
+void loop()
+{
   progressBar.setProgress(random(0, 100));
+
+  /* DEBUG */
+  Serial.print("Current progress: ");
+  Serial.print(progressBar.getProgress()); // get current percentage
+  Serial.println("%\n");
 
   delay(3000);
 }

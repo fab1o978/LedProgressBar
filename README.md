@@ -29,3 +29,11 @@ progressBar.setColor(9, 10, CRGB::Red);
 // Updates leds array/strip (turned on at 45%)
 progressBar.setProgress(45);
 ```
+### Helpers
+```C++
+// Return percentage value of input value (based on default 0-1023 analogRead range)
+progressBar.calculatePercentage(inputValue);
+
+// Return percentage value of input value, using custom min/max values
+progressBar.calculatePercentage(inputValue, 10, 100);
+```

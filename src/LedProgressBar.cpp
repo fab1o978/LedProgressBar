@@ -121,16 +121,13 @@ void LedProgressBar::setDebug(bool _state)
     debug = _state;
 }
 
+// Smooths analog input value
 float LedProgressBar::smooth(float _inputValue)
 {
+    // Calculates difference
     unsigned int difference = smoothedReading - _inputValue;
 
-    if (debug)
-    {
-        Serial.print("Difference: ");
-        Serial.println(difference);
-    }
-
+    // If difference is bigger than deadZone value, then set new value as smoothedReading base value
     if (difference > deadZone)
     {
         smoothedReading = _inputValue;
@@ -146,7 +143,6 @@ float LedProgressBar::smooth(float _inputValue)
 // updates leds state (must be followed by FastLED.show())
 void LedProgressBar::update(int _progress)
 {
-
     float total = map(_progress, 0, 100, 0, 255 * numleds);
 
     for (int led = 0; led < numleds; led++)

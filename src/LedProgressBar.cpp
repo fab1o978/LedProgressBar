@@ -1,4 +1,5 @@
 #include <LedProgressBar.h>
+#include <ColorFade.h>
 
 // Initialize new LedProgressBar object with given leds number
 LedProgressBar::LedProgressBar(int _numleds)
@@ -86,6 +87,17 @@ void LedProgressBar::setColor(int _start, int _end, CRGB _color)
     for (int i = first; i <= last; i++)
     {
         ledsColors[i] = _color;
+    }
+}
+
+void LedProgressBar::setColor(int _start, int _end, CRGB _startColor, CRGB _endColor){
+    int first = _start - 1;
+    int last = _end - 1;
+    int steps = 1000 / (_end - _start);
+
+    // Start led and end led will have respectively start and end colors
+    for (int i = _start; i <= _end; i++){
+        ledsColors[i] = fadeTowardColor(_startColor, _endColor, steps);
     }
 }
 

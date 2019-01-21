@@ -23,6 +23,7 @@ class LedProgressBar
     void setColor(CRGB color);
     void setColor(int index, CRGB color);
     void setColor(int start, int end, CRGB color);
+    void setColor(int start, int end, CRGB startColor, CRGB endColor);
     void setProgress(int progress);
     void setDebug(bool state);
     int calculatePercentage(int inputValue);

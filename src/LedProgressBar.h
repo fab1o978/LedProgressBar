@@ -4,10 +4,12 @@
 #include <Arduino.h>
 #include <FastLED.h>
 
-class LedProgressBar {
-    float smoothedReading;
-    float smoothingFactor = .9;
-    int deadZone = 3;
+class LedProgressBar
+{
+  // Analog input smoothing
+  float smoothedReading;
+  float smoothingFactor = .9;
+  int deadZone = 3;
 
   public:
     // Constructors

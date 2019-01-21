@@ -97,7 +97,7 @@ float LedProgressBar::smooth(float _inputValue){
     if(difference > deadZone){
         smoothedReading = _inputValue;
     } else {
-        smoothedReading = smoothedReading * .9 + _inputValue * .1;
+        smoothedReading = smoothedReading * smoothingFactor + _inputValue * (1 - smoothingFactor);
     }
 
     return smoothedReading;

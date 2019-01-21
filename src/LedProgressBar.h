@@ -6,6 +6,7 @@
 
 class LedProgressBar {
     float smoothedReading;
+    float smoothingFactor = .9;
     int deadZone = 3;
 
   public:

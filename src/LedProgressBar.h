@@ -18,6 +18,7 @@ class LedProgressBar
     LedProgressBar(int _numleds, CRGB _color, byte inputPin);
 
     // Methods
+    void run();
     void setInputRange(int min, int max);
     void setColor(CRGB color);
     void setColor(int index, CRGB color);
@@ -39,7 +40,7 @@ class LedProgressBar
 
     // Variables
     int numleds;
-    byte inputPin;
+    byte inputPin = 255;
     int min = 0;
     int max = 1023; // default max value for analogRead
     int progress = 0;

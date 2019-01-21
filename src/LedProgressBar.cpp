@@ -196,6 +196,7 @@ void LedProgressBar::run()
         Serial.print("Reading: ");
         Serial.println((int)smoothedReading);
 
-        update(calculatePercentage(smoothedReading));
+        // Updates current percentage based on analog input
+        setProgress(calculatePercentage(smoothedReading));
     }
 }

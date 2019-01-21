@@ -14,6 +14,9 @@ LedProgressBar progressBar(10);
 
 // Create a progress bar with 10 leds, all set to BLUE
 LedProgressBar progressBar(10, CRGB::Blue);
+
+// Create a progress bar with 10 leds, all set to BLUE, with pin monitoring
+LedProgressBar progressBar(10, CRGB::Blue, A0);
 ```
 ### Methods
 ```C++

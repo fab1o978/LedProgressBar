@@ -3,6 +3,9 @@ Arduino library to sequentially turn on leds array or strip based on input value
 
 Intermediate values will be faded. Eg.: an input value of 55% on a 10 led strip, will turn on first 5 leds with full brightness and 6th led with half brightness.
 
+## ToDo
+- [ ] Analog input smoothing
+
 ## Examples
 ### Constructors
 ```C++

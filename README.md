@@ -33,6 +33,10 @@ progressBar.setColor(7, 8, CRGB::Orange);
 // Set leds 9 and 10 to RED
 progressBar.setColor(9, 10, CRGB::Red);
 
+// Set led 1 to GREEN and led 10 to RED.
+// Leds 2-9 will have intermediate colors (eg.: GREEN -> YELLOW -> ORANGE -> RED)
+progressBar.setColor(1, 10, CRGB::Green, CRGB::Red);
+
 // Updates leds array/strip (turned on at 45%)
 progressBar.setProgress(45);
 ```

@@ -90,6 +90,7 @@ void LedProgressBar::setColor(int _start, int _end, CRGB _color)
     }
 }
 
+// Set start/end color, fading between them across leds range
 void LedProgressBar::setColor(int _start, int _end, CRGB _startColor, CRGB _endColor){
     int first = _start - 1;
     int last = _end - 1;

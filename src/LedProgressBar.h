@@ -8,8 +8,8 @@ class LedProgressBar
 {
   // Analog input smoothing
   float smoothedReading;
-  float smoothingFactor = .9;
-  int deadZone = 3;
+  float smoothingFactor = .95;
+  int deadZone = 5;
 
   public:
     // Constructors

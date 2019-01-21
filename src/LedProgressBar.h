@@ -5,6 +5,8 @@
 #include <FastLED.h>
 
 class LedProgressBar {
+    float smoothedReading;
+
     public:
         // Constructors
         LedProgressBar(int _numleds);
@@ -20,6 +22,7 @@ class LedProgressBar {
         int calculatePercentage(int inputValue);
         int calculatePercentage(int inputValue, int min, int max);
         int getProgress();
+        float smooth(float input);
 
         // Variables
         CRGB *leds; // leds array used by FastLED library

@@ -86,6 +86,10 @@ void LedProgressBar::setDebug(bool _state){
     debug = _state;
 }
 
+float LedProgressBar::smooth(float _inputValue){
+    smoothedReading = smoothedReading * .75 + _inputValue * .25;
+}
+
 // updates leds state (must be followed by FastLED.show())
 void LedProgressBar::update(int _progress){
 

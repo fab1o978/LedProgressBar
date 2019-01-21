@@ -1,5 +1,3 @@
-#include <SoftwareSerial.h>
-#include <SerialCommand.h>
 #include <FastLED.h>
 #include <LedProgressBar.h>
 
@@ -26,7 +24,7 @@ void setup() {
 }
 
 void loop() {
-  delay(150);
-
   progressBar.setProgress(random(0, 100));
+
+  delay(3000);
 }

@@ -7,3 +7,4 @@ setProgress	KEYWORD2
 calculatePercentage	KEYWORD2
 setDebug	KEYWORD2
 leds	KEYWORD2
+smooth	KEYWORD2

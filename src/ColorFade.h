@@ -1,3 +1,12 @@
+// Function for fading one RGB color toward a target RGB color
+//
+// This function _modify_ the existing color, in place.
+//
+// All fades are done in RGB color space.
+//
+// Mark Kriegsman
+// December 2016
+
 // Helper function that blends one uint8_t toward another by a given amount
 void nblendU8TowardU8( uint8_t& cur, const uint8_t target, uint8_t amount)
 {

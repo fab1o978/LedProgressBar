@@ -5,7 +5,7 @@ Intermediate values will be faded. Eg.: an input value of 55% on a 10 led strip,
 
 ## ToDo
 - [ ] Analog input smoothing
-- [ ] Fade between colors
+- [x] Fade between colors
 
 ## Examples
 ### Constructors

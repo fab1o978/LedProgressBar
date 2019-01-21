@@ -96,7 +96,10 @@ void LedProgressBar::setColor(int _start, int _end, CRGB _startColor, CRGB _endC
     int last = _end - 1;
     int steps = 1000 / (_end - _start);
 
-    // Start led and end led will have respectively start and end colors
+    // Set start / end colors
+    ledsColors[first] = _startColor;
+    ledsColors[last] = _endColor;
+
     for (int i = _start; i <= _end; i++){
         ledsColors[i] = fadeTowardColor(_startColor, _endColor, steps);
     }

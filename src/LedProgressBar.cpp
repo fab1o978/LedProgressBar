@@ -30,6 +30,26 @@ LedProgressBar::LedProgressBar(int _numleds, CRGB _color){
     setColor(color);
 }
 
+LedProgressBar::LedProgressBar(int _numleds, CRGB _color, byte _pin){
+    // set how many leds to control
+    numleds = _numleds;
+
+    // set default color
+    color = _color;
+
+    // initialize leds array
+    leds = new CRGB[numleds];
+
+    // initialize leds colors array
+    ledsColors = new CRGB[numleds];
+
+    // Set all leds color
+    setColor(color);
+
+    // Set pin to monitor
+    inputPin = _pin;
+}
+
 // adjust minimum and maximum values used on map function
 void LedProgressBar::setInputRange(int _min, int _max){
     min = _min;

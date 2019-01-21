@@ -87,7 +87,19 @@ void LedProgressBar::setDebug(bool _state){
 }
 
 float LedProgressBar::smooth(float _inputValue){
-    smoothedReading = smoothedReading * .75 + _inputValue * .25;
+    unsigned int difference = smoothedReading - _inputValue;
+
+    if(debug){
+        Serial.print("Difference: ");
+        Serial.println(difference);
+    }
+
+    if(difference > deadZone){
+        smoothedReading = _inputValue;
+    } else {
+        smoothedReading = smoothedReading * .9 + _inputValue * .1;
+    }
+
     return smoothedReading;
 }
 

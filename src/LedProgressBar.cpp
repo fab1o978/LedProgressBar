@@ -91,7 +91,8 @@ void LedProgressBar::setColor(int _start, int _end, CRGB _color)
 }
 
 // Set start/end color, fading between them across leds range
-void LedProgressBar::setColor(int _start, int _end, CRGB _startColor, CRGB _endColor){
+void LedProgressBar::setColor(int _start, int _end, CRGB _startColor, CRGB _endColor)
+{
     int first = _start - 1;
     int last = _end - 1;
     int steps = 1000 / (_end - _start);
@@ -103,6 +104,11 @@ void LedProgressBar::setColor(int _start, int _end, CRGB _startColor, CRGB _endC
     for (int i = _start; i <= _end; i++){
         ledsColors[i] = fadeTowardColor(_startColor, _endColor, steps);
     }
+}
+
+void LedProgressBar::usePot(bool state)
+{
+    usePotentiometer = state;
 }
 
 // calculate percentage from input value
@@ -200,7 +206,7 @@ void LedProgressBar::update(int _progress)
 void LedProgressBar::run()
 {
     // Works only if input pin has been defined
-    if(inputPin != 255){
+    if(inputPin != 255 && usePotentiometer){
 
         // Read and smooth analog read
         smooth(analogRead(inputPin));
@@ -211,4 +217,9 @@ void LedProgressBar::run()
         // Updates current percentage based on analog input
         setProgress(calculatePercentage(smoothedReading));
     }
+    else
+    {
+        setProgress(100);
+    }
+    
 }

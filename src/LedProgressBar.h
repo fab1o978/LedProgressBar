@@ -26,6 +26,7 @@ class LedProgressBar
     void setColor(int start, int end, CRGB startColor, CRGB endColor);
     void setProgress(int progress);
     void setDebug(bool state);
+    void usePot(bool state);
     int calculatePercentage(int inputValue);
     int calculatePercentage(int inputValue, int min, int max);
     int getProgress();
@@ -33,7 +34,7 @@ class LedProgressBar
 
     // Variables
     CRGB *leds;       // leds array used by FastLED library
-    CRGB *ledsColors; // leds colors
+    CRGB *ledsColors; // leds colors    
 
   private:
     // Methods
@@ -47,6 +48,7 @@ class LedProgressBar
     int progress = 0;
     bool debug = false;
     CRGB color;
+    bool usePotentiometer = true;
 };
 
 #endif

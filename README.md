@@ -39,6 +39,9 @@ progressBar.setColor(1, 10, CRGB::Green, CRGB::Red);
 
 // Updates leds array/strip (turned on at 45%)
 progressBar.setProgress(45);
+
+// (Dis)able potentiometer support
+progressBar.usePot(true)
 ```
 ### Helpers
 ```C++
